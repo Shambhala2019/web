@@ -53,6 +53,7 @@ html,body{
 	padding-bottom: 2rem;
 }
 .welcome {
+	font-size: 2em;
 	width: 75%;
 	margin: 0 auto;
 	padding-top: 2rem;
@@ -123,6 +124,24 @@ hr.light-100{
 	margin-top: .8rem;
 	margin-bottom: 1rem;
 }
+
+.map-responsive{
+	overflow:hidden;
+	padding-bottom: 50%;
+	position: relative;
+	height:0;
+}
+.map-responsive iframe{
+	left:0;
+	top:0;
+	height:100%;
+	width: 100%;
+	position: absolute;
+}	
+
+
+
+
 
 /*---Media Queries --*/
 @media (max-width: 992px) {
