@@ -7,10 +7,18 @@
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> 
+	<!---<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+
 </head>
 <body>
 
@@ -25,19 +33,29 @@
 	<div class="collapse navbar-collapse" id="navbarResponsive">
 		<ul class="navbar-nav ml-auto">
 		<li class="nav-item active" >
-			<a class="nav-link" href="#">Home</a>
+			<a class="nav-link" href="index.html">HOME</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#">About-Us</a>
+			<a class="nav-link" href="contact.html">ABOUT-US</a>
+		</li>
+		<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="rooms.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ROOMS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Room1</a>
+          <a class="dropdown-item" href="#">Room2</a>
+          <a class="dropdown-item" href="#">Room3</a>
+        </div>
+      </li>
+		<li class="nav-item">
+			<a class="nav-link" href="attractions.html">ATTRACTIONS</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#">Rooms </a>
+			<a class="nav-link" href="dining.html">SERVICES</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#">Attractions</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#">Services</a>
+			<a class="nav-link" href="tarrif.html">TARIFF</a>
 		</li>
 		
 	</div>
@@ -45,6 +63,7 @@
 </nav>
 
 <!--- Image Slider -->
+<div class="contaimer">
 <div id="slides" class="carousel slide" data-ride="carousel">
 <ul class="carousel-indicators">
 	<li data-target="#slides" data-slide-to="0" class="active"></li>
@@ -53,25 +72,53 @@
 </ul>
 <div class="carousel-inner">
 	<div class="carousel-item active">
-	<img src="img/background.png">
-	<div class="carousel-caption">
-		<h1 class="display-3">Shambala</h1>
-		<h3>Home Like Stay</h3>
-		<button type="button" class="btn btn-outline-light btn-lg">
-		View Rooms</button>
-		<button type="button" class="btn btn-primary btn-lg">
-		Close Attractions</button>
-	</div>
+	<img src="img/1800x728.png">
 	</div>
 	<div class="carousel-item">
-	<img src="img/background.png">
+	<img src="img/1800x728.png">
 	</div>
 	<div class="carousel-item">
-	<img src="img/background.png">
+	<img src="img/1800x728.png">
 	</div>
 </div>
 </div>
-<!--- Jumbotron -->
+</div>
+<!----- slick links  under carausel ---->
+<div class="container">
+  <div class="your-class">
+	<div class="card">
+     <div><img src="img/350x150.jpg" class="fluid" alt=""></div>
+	 </div>
+	 <div class="card">
+     <div><img src="img/350x150.jpg" class="fluid" alt=""></div>
+	 </div>
+     <div class="card">
+	 <div><img src="img/350x150.jpg" class="fluid" alt=""></div>
+	 </div>
+	 <div class="card">
+	 <div><img src="img/350x150.jpg" class="fluid" alt=""></div>
+	 </div>
+	 <div class="card">
+	 <div><img src="img/350x150.jpg" class="fluid" alt=""></div>
+	 </div>
+   </div>
+ 
+ <script type="text/javascript">
+    $(document).ready(function(){
+      $('.your-class').slick({
+        slidesToShow: 3,
+		slidesToScroll: 1,
+		autoplay: true,
+		//mobileFirst: true,
+		//rows:1
+		autoplaySpeed: 2000,
+      });
+    });
+  </script>
+</div>
+
+<!----card deck for brief summary -------->
+
 <div class="container-fluid">
 <div class="row jumbotron">
 	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
@@ -84,7 +131,7 @@
 </div>
 </div>
 
-<!--- Welcome Section -->
+<!--- Welcome Section 
 <div class="container-fluid padding">
 <div class="row welcome text-center">
 	<div class="col-12">
@@ -98,100 +145,165 @@
 	
 </div>
 </div>
-
-<!--- Three Column Section -->
-<div class="container-fluid padding">
-<div class="row text-center padding">
-	<div class="col-xs-12 col-sm-3 col-md-3">	
-	<i class="fas fa-home"></i>
-	<h3>Stay</h3>
-	<p>Stay in the midst of mother nature</p>
-	</div>
-	<div class="col-xs-12 col-sm-3 col-md-3">
-	<i class="fas fa-home"></i>
-	<h3>Activities</h3>
-	<p>Discover activities to do</p>
-	</div>
-	<div class="col-xs-12 col-sm-3 col-md-3">
-	<i class="fas fa-home"></i>
-	<h3>Rooms</h3>
-	<p>Check out our rooms</p>
-	</div>
-	<div class="col-xs-12 col-sm-3 col-md-3">
-	<i class="fas fa-home"></i>
-	<h3>Rooms</h3>
-	<p>Check out our rooms</p>
-	</div>
-</div>
-</div>
+-->
 
 <!--- Two Column Section -->
 <div class="container-fluid padding">
 <div class="row padding">
-	<div class="col-lg-6">
-	<h2>stay at shambhala </h2>
-	<p>lorium ipsum lorium ipsum loruim ipsum loruim ispskfa loruim ipsum lorium ipsumm lorium ipsum 
-	lorium ipsum loruim ipsum loruium ipsum loruim ipsum lorium ipsum loriumipsum lorium ipsum lorium ipsum
-	lorium ipsum loruim ipsum loruium ipsum loruim ipsum lorium ipsum loriumipsum lorium ipsum lorium ipsum
-	lorium ipsum loruim ipsum loruium ipsum loruim ipsum lorium ipsum loriumipsum lorium ipsum lorium ipsum
-	lorium ipsum loruim ipsum loruium ipsum loruim ipsum lorium ipsum loriumipsum lorium ipsum lorium ipsum
-	lorium ipsum loruim ipsum loruium ipsum loruim ipsum lorium ipsum loriumipsum lorium ipsum lorium ipsum
-	lorium ipsum loruim ipsum loruium ipsum loruim ipsum lorium ipsum loriumipsum lorium ipsum lorium ipsum
-	lorium ipsum loruim ipsum loruium ipsum loruim ipsum lorium ipsum loriumipsum lorium ipsum lorium ipsum
-	lorium ipsum loruim ipsum loruium ipsum loruim ipsum lorium ipsum loriumipsum lorium ipsum lorium ipsum
-	lorium ipsum loruim ipsum loruium ipsum loruim ipsum lorium ipsum loriumipsum lorium ipsum lorium ipsum
-	lorium ipsum loruim ipsum loruium ipsum loruim ipsum lorium ipsum loriumipsum lorium ipsum lorium ipsum
-	lorium ipsum loruim ipsum loruium ipsum loruim ipsum lorium ipsum loriumipsum lorium ipsum lorium ipsum</p>
-	<br>
-	<a href="#" class="btn btn-primary">Learn More</a>
+	<div class="col-lg-8">
+	<h3>SHAMBHALA! AN ENCHANTING GET AWAY FROM CITY</h3>
+	<p class="intro-text">A brand new homestay located in mid of nature with close proximity of walkable distance from Mallali falls 
+	near sowmarpet Coorg Nestled in the lust green surrounding the waterfalls and breath taking views of nature</p>
+	
+	<p class="intro-text">We are located 4.5 hours of drive from bangalore which makes for perfect getaway destination for weekends.
+	We welocme you and your family/friends into lap of mother nature</p>
+	
+	<p class="intro-text">Located in hill slope Shambhala offers an breathe taking view of mother nature from comfort of  shambhala rooms.
+	Explore nature like never before,engage in several activities at homestay or there is nature all around why not 
+	Start EXPLORING, it's all yours.</p>
+	<!---<a href="#" class="btn btn-primary">Learn More</a>--->
 	</div>
-	<div class="col-lg-6">
-		<img src="img/desk.png" class="img-fluid">
+	<div class="col-lg-4">
+		<img src="img/dummy.jpg" class="img-fluid">
 	</div>
 
 </div>
 </div>
 <hr class="my-4">
-<!--- Fixed background -->
-<figure>
-	<div class="fixed-wrap">
-	<div class="fixed">
-	
-	<div>
+
+<!---testing- -->
+<div class="container">
+	<div class="card-deck">
+	<div class="card">
+	<div class="card-body">
+	<img src="img/350x150.jpg" class="img-fluid" alt=""/>
+	<h5 class="card-title" text-decoration="bold">Stay</h5>
+	<p class="card-p">Rs 1800/night per person
+	Breakfast,Lunch and dinner included
+	Rs 800 for kids, no charge for children
+	under 5 years.</p>
 	</div>
-</figure>
-<!--- Emoji Section -->
-<button class="fun" data-toggle="collapse" data-target="#emoji">Check out Drone shots</button>
-<div id="emoji" class="collapse">
+	</div>
+	<div class="card">
+	<div class="card-body">
+	<img src="img/350x150.jpg" class="img-fluid" alt=""/>
+	<h5 class="card-title">Accomodation</h5>
+	<p class="card-p">
+	Ample parking space, lot of privacy 
+	24hours security and round the clock services
+	</p>
+	</div>
+	</div>
+	<div class="card">
+	<div class="card-body">
+			<img src="img/350x150.jpg" class="img-fluid" alt=""/>
+			<h5 class="card-title">Activities</h5>
+				<p class="card-p">
+					Many activities included within homestay,several places to explore
+					Trekking, waterfalls, & coffee plantation
+				</p>
+			</div>
+	</div>
+</div>
+</div>
+<hr class="my-4">
+<!---------->
+
 <div class="container-fluid padding">
-<div class="row text-center">
-	<div class="col-sm-6 col-md-3">
-	<img class="gif" src="img/gif/panda.gif">
+<div class="slot-title">
+	<h5>Things to do and activities in and around Shambala!</h5>
+</div >
+<div class="row padding">
+	<div class="col-lg-4">
+		<ul>
+			<li>Nature Walk</li>
+			<li>Water stream</li>
+			<li>Cricket</li>
+			<li>Volley Ball</li>
+			<li>Badminton</li>
+			<li>Carrom & chess </li>
+		</ul>
 	</div>
-	<div class="col-sm-6 col-md-3">
-	<img class="gif" src="img/gif/poo.gif">
+		<div class="col-lg-4">
+			<ul>
+			<li>Mallalli Falls</li>
+			<li>Pushpagiri Treks</li>
+			<li>Dodda betta</li>
+			<li>Abbimatta falls</li>
+			<li>bisla ghat beauty spot</li>
+			<li>Ambur abbbi Falls </li>
+		</li>
 	</div>
-	<div class="col-sm-6 col-md-3">
-	<img class="gif" src="img/gif/chicken.gif">
+</div>
+<hr class="my-4">
+<!------More trekking options around shambhala ------>
+
+<div class="container">
+	<div class="Trekking">
+	<h5> Trekking options around shambhala</h5>
 	</div>
-	<div class="col-sm-6 col-md-3">
-	<img class="gif" src="img/gif/unicorn.gif">
+	<div class="card-deck">
+	<div class="card">
+	<div class="card-body">
+	<img src="img/350x150.jpg" class="img-fluid" alt=""/>
+	<h5 class="card-title" text-decoration="bold">Pushpagiri Trek</h5>
+	<p class="card-p">Shambala homestay is one of the nearest homestays to pushpagiri we are located at 
+	just 8 kms from the srartingpoint of pushpagiri trek . We offer all assistance in terms of 
+	food and logistics for you to complete the trek cumfortably</p>
+	</div>
+	</div>
+	<div class="card">
+	<div class="card-body">
+	<img src="img/350x150.jpg" class="img-fluid" alt=""/>
+	<h5 class="card-title">Megan kote Trek</h5>
+	<p class="card-p">
+	This trek is exclusive to shambhala Homestay guests This trek takes you to the top of the mountain
+	right opposite to mallali falls you will witness breataking view of the serene Falls nestled 
+	in the dense greenery of the surrounding mountains.
+	</p>
+	</div>
+	</div>
+	<div class="card">
+	<div class="card-body">
+			<img src="img/350x150.jpg" class="img-fluid" alt=""/>
+			<h5 class="card-title">Katte Betta Trek </h5>
+				<p class="card-p">
+					Shanthalli katte Betta is located at a distance of just 10kms from shambhala
+					.This trek gives you an opportunity to witness the beuty of mountains around Homestay.
+					Also you have the opportunity to visit the beauftifull Kumaralingeshwara temple.
+				</p>
+			</div>
 	</div>
 </div>
 </div>
-<hr>
+<hr class="my-4">
+<!------------- Reviews section ----->
+<div class="container">
+	<div class="row">
+		<h5> CHECK OUT WHAT OUR CUSTOMERS SAY ABOUT US</h5>
+	</div>
 </div>
-  
-<!--- Meet the team -->
+<div id="slides" class="carousel slide" data-ride="carousel">
+<ul class="carousel-indicators">
+	<li data-target="#slides" data-slide-to="0" class="active"></li>
+	<li data-target="#slides" data-slide-to="1"></li>
+	<li data-target="#slides" data-slide-to="2"></li>
+</ul>
+<div class="carousel-inner">
+	<div class="carousel-item active">
+	<img src="img/1800x728.png">
+	</div>
+	<div class="carousel-item">
+	<img src="img/1800x728.png">
+	</div>
+	<div class="carousel-item">
+	<img src="img/1800x728.png">
+	</div>
+</div>
+</div>
 
-
-<!--- Cards -->
-
-
-<!--- Two Column Section -->
-
-
-<!--- Connect -->
+<hr class="my-4">
+<!----- social media options ------>
 <div class="container-fluid padding">
 <div class="row text-center padding">
 	<div class="col-12">
@@ -243,6 +355,8 @@
 </div>
 </div>
 </footer>
+<!----<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+-->
 </body>
 </html>
 
